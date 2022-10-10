@@ -1,11 +1,6 @@
 name: Weekly PS issue creation
 on:
-  pull_request:
-    branches:
-      - main
-
   schedule:
-    # * is a special character in YAML so you have to quote this string
     - cron: "0 0 * * SUN"
 jobs:
   Explore-GitHub-Actions:
