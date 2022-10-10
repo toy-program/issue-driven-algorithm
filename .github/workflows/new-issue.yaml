@@ -1,0 +1,16 @@
+name: Weekly PS issue creation
+on:
+  # pull_request:
+  #   branches:
+  #     - main
+
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "0 0 * * SUN"
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
